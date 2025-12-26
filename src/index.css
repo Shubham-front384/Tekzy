@@ -19,8 +19,10 @@
   --text-5xls: 2.5rem;
   --text-5xl: 3rem;
   --text-hero: 3.125rem;
+  --text-large: 6.25rem;
   --line-xs: 130%;
   --line-xl: 150%;
+  --line-2xl: 170%;
 }
 
 * {
@@ -209,6 +211,7 @@ nav .nav-contact .menu-close svg {
 
 .about--section {
   padding: var(--text-5xls) 0;
+  margin-bottom: 3.75rem;
 }
 .about--section .about-section {
   padding: 0 var(--text-xl);
@@ -226,12 +229,12 @@ nav .nav-contact .menu-close svg {
 }
 .about--section .about-section .about-data .about-left div .about-heading {
   display: flex;
-  align-items: flex-start;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
-  margin-bottom: 5px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
   font-size: var(--text-sm);
   font-weight: 400;
+  margin-bottom: 5px;
 }
 .about--section .about-section .about-data .about-left div .about-subheading {
   font-size: var(--text-xl);
@@ -299,6 +302,83 @@ nav .nav-contact .menu-close svg {
 }
 .about--section .about-section .about-bottom img {
   filter: grayscale(1);
+}
+
+.project--section .project-section {
+  padding: 0 var(--text-xl);
+}
+.project--section .project-section .project-info {
+  margin-bottom: var(--text-xl);
+}
+.project--section .project-section .project-info .project-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.project--section .project-section .project-info .project-heading {
+  font-size: 1.625rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.project--section .project-section .project-card .card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--text-5xls);
+}
+.project--section .project-section .project-card .card-list a {
+  padding: var(--text-xl) var(--text-xl) 0 var(--text-xl);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--text-xl);
+  text-decoration: none;
+  color: var(--title);
+  flex-direction: column;
+  background-color: var(--bg);
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  flex-flow: column;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.project--section .project-section .project-card .card-list a .work-top {
+  width: 100%;
+}
+.project--section .project-section .project-card .card-list a .work-top .work-info .work-title {
+  font-size: var(--text-md);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.project--section .project-section .project-card .card-list a .work-top .work-info .single-text {
+  max-width: 90%;
+  font-size: var(--text-sm);
+  line-height: 150%;
+  font-weight: 400;
+}
+.project--section .project-section .project-card .card-list a .work-top img {
+  display: none;
+  transition: transform 0.3s ease;
+}
+.project--section .project-section .project-card .card-list a .work-img img {
+  width: 100%;
+  height: 100%;
+  transform: scale(0.98);
+  transition: transform 0.3s ease;
+}
+.project--section .project-section .project-card .card-list a:hover .work-top img {
+  transform: rotate(45deg);
+}
+.project--section .project-section .project-card .card-list a:hover .work-img img {
+  transform: scale(1);
+}
+.project--section .project-section .project-card .card-list .project3 {
+  margin-bottom: var(--text-4xls);
 }
 
 @media (min-width: 768px) {
@@ -375,6 +455,37 @@ nav .nav-contact .menu-close svg {
   .about--section .about-section .about-data .about-right {
     width: 100%;
     max-width: 40%;
+  }
+  .project--section .project-section .project-info .project-heading {
+    font-size: 2.25rem;
+  }
+  .project--section .project-section .project-card .card-list {
+    gap: var(--text-hero);
+  }
+  .project--section .project-section .project-card .card-list div a .work-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .project--section .project-section .project-card .card-list div a .work-top .work-info {
+    max-width: 75%;
+  }
+  .project--section .project-section .project-card .card-list div a .work-top .work-info .work-title {
+    font-size: 1.625rem;
+  }
+  .project--section .project-section .project-card .card-list div a .work-top .work-info .single-text {
+    font-size: var(--text-md);
+    line-height: var(--line-2xl);
+  }
+  .project--section .project-section .project-card .card-list div a .work-top img {
+    display: block;
+    max-width: 32px;
+    min-width: 32px;
+    max-height: 32px;
+    min-height: 32px;
+  }
+  .project--section .project-section .project-card .project3 {
+    margin-bottom: var(--text-6xl) !important;
   }
 }
 @media (min-width: 1024px) {
@@ -458,6 +569,41 @@ nav .nav-contact .menu-close svg {
   }
   .about--section .about-section .about-data .about-right p {
     font-size: var(--text-md);
-    line-height: 170%;
+    line-height: var(--line-2xl);
+  }
+  .about--section .about-section .about-bottom {
+    justify-content: space-between;
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  .project--section .project-section {
+    max-width: 1336px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project--section .project-section .project-info .project-heading {
+    font-size: var(--text-4xl);
+  }
+  .project--section .project-section .project-card .card-list {
+    gap: 3.75rem;
+  }
+  .project--section .project-section .project-card .card-list div a {
+    gap: 3.75rem;
+  }
+  .project--section .project-section .project-card .card-list div a .work-top .work-info {
+    max-width: 56%;
+  }
+  .project--section .project-section .project-card .card-list div a .work-top .work-info .work-title {
+    font-size: 2rem;
+  }
+  .project--section .project-section .project-card .card-list div a .work-top img {
+    display: block;
+    max-width: 35px;
+    min-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+  }
+  .project--section .project-section .project-card .project3 {
+    margin-bottom: 9.375rem !important;
   }
 }/*# sourceMappingURL=index.css.map */

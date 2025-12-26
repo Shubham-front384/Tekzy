@@ -1,6 +1,7 @@
 import AboutUs from "../components/AboutUs"
 import Hero from "../components/Hero"
 import Nav from "../components/Nav"
+import Projects from "../components/Projects"
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <Nav />
       <Hero />
       <AboutUs />
+      <Projects />
     </>
   )
 }
