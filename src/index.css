@@ -381,6 +381,95 @@ nav .nav-contact .menu-close svg {
   margin-bottom: var(--text-4xls);
 }
 
+.service--section .service-section {
+  padding: 0 var(--text-xl);
+}
+.service--section .service-section .service-left {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--text-4xls);
+  padding: var(--text-4xls) 0;
+}
+.service--section .service-section .service-left div .service-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.service--section .service-section .service-left div .service-subheading {
+  font-size: 1.625rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-bottom: var(--text-xl);
+}
+.service--section .service-section .service-left div p {
+  font-size: var(--text-sm);
+  line-height: var(--line-xl);
+  font-weight: 400;
+}
+.service--section .service-section .service-left .service-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--text-xs);
+  padding: 5px 5px 5px 20px;
+  font-size: var(--text-sm);
+  color: var(--bg);
+  background: var(--title);
+  text-decoration: none;
+  text-transform: capitalize;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50px;
+}
+.service--section .service-section .service-left .service-btn span:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  background: var(--primary);
+  border-radius: 50%;
+  min-width: 35px;
+  min-width: 35px;
+  max-height: 35px;
+  min-height: 35px;
+}
+.service--section .service-section .service-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--text-xl);
+  flex-direction: column;
+  padding-top: var(--text-xl);
+}
+.service--section .service-section .service-right .card-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--text-xl);
+  flex-direction: column;
+  padding-bottom: var(--text-xl);
+  color: var(--title);
+  text-decoration: none;
+  width: 100%;
+}
+.service--section .service-section .service-right .card-info .card-data h5 {
+  font-size: var(--text-lg);
+  margin-bottom: 6px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.service--section .service-section .service-right .card-info .card-data p {
+  font-size: var(--text-sm);
+  line-height: var(--line-xl);
+}
+.service--section .service-section .service-right .card-info:last-child {
+  margin-bottom: 3.75rem;
+}
+
 @media (min-width: 768px) {
   .hero--section .hero_section {
     display: flex;
@@ -485,7 +574,38 @@ nav .nav-contact .menu-close svg {
     min-height: 32px;
   }
   .project--section .project-section .project-card .project3 {
-    margin-bottom: var(--text-6xl) !important;
+    margin-bottom: var(--text-large) !important;
+  }
+  .service--section .service-section .service-left {
+    row-gap: 40px;
+    padding: 50px 60px 50px 0;
+  }
+  .service--section .service-section .service-left div .service-subheading {
+    font-size: 2.25rem;
+  }
+  .service--section .service-section .service-left div p {
+    font-size: var(--text-md);
+    line-height: var(--line-2xl);
+  }
+  .service--section .service-section .service-right .card-info {
+    flex-direction: row;
+    justify-content: space-between;
+    -moz-column-gap: 4.875rem;
+         column-gap: 4.875rem;
+  }
+  .service--section .service-section .service-right .card-info img {
+    order: 2;
+  }
+  .service--section .service-section .service-right .card-info .card-data {
+    order: 1;
+  }
+  .service--section .service-section .service-right .card-info .card-data h5 {
+    margin-bottom: var(--text-xxs);
+    font-size: var(--text-xl);
+  }
+  .service--section .service-section .service-right .card-info .card-data p {
+    font-size: var(--text-md);
+    line-height: var(--line-2xl);
   }
 }
 @media (min-width: 1024px) {
@@ -605,5 +725,27 @@ nav .nav-contact .menu-close svg {
   }
   .project--section .project-section .project-card .project3 {
     margin-bottom: 9.375rem !important;
+  }
+  .service--section .service-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  .service--section .service-section .service-left {
+    padding: var(--text-hero) 3.75rem var(--text-hero) 0;
+    justify-content: space-between;
+    max-width: 46%;
+  }
+  .service--section .service-section .service-right {
+    padding-top: var(--text-hero);
+    max-width: 50%;
+  }
+  .service--section .service-section .service-right .card-info {
+    -moz-column-gap: 78px;
+         column-gap: 78px;
+    padding: 0 0 var(--text-4xls) var(--text-hero);
+  }
+  .service--section .service-section .service-right .card-info .card-data h5 {
+    font-size: 20px;
+    margin-bottom: 22px;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -11,18 +11,26 @@ const Projects = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.project-card-item', {
+
+      gsap.set('.project-card-item', {
         opacity: 0,
         y: 60,
-        duration: 0.8,
-        ease: 'power3.out',
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: projectContainerRef.current,
-          start: 'top 80%',
-          once: true,
-        },
       });
+
+      ScrollTrigger.batch('.project-card-item', {
+        start: 'top 85%',
+        onEnter: (batch) => {
+          gsap.to(batch, {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: 'power3.out',
+            stagger: 0.15,
+          });
+        },
+        once: true,
+      });
+
     }, projectContainerRef);
 
     return () => ctx.revert();

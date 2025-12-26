@@ -1,7 +1,8 @@
-import AboutUs from "../components/AboutUs"
-import Hero from "../components/Hero"
-import Nav from "../components/Nav"
-import Projects from "../components/Projects"
+import AboutUs from '../components/AboutUs';
+import Hero from '../components/Hero';
+import Nav from '../components/Nav';
+import Projects from '../components/Projects';
+import Services from '../components/Services';
 
 const Home = () => {
   return (
@@ -10,8 +11,9 @@ const Home = () => {
       <Hero />
       <AboutUs />
       <Projects />
+      <Services />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
