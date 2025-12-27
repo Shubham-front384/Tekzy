@@ -234,7 +234,8 @@ nav .nav-contact .menu-close svg {
   gap: 0.5rem;
   font-size: var(--text-sm);
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
+  text-transform: capitalize;
 }
 .about--section .about-section .about-data .about-left div .about-subheading {
   font-size: var(--text-xl);
@@ -317,7 +318,8 @@ nav .nav-contact .menu-close svg {
   gap: 0.5rem;
   font-size: var(--text-sm);
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
+  text-transform: capitalize;
 }
 .project--section .project-section .project-info .project-heading {
   font-size: 1.625rem;
@@ -358,7 +360,7 @@ nav .nav-contact .menu-close svg {
 .project--section .project-section .project-card .card-list a .work-top .work-info .single-text {
   max-width: 90%;
   font-size: var(--text-sm);
-  line-height: 150%;
+  line-height: var(--line-xl);
   font-weight: 400;
 }
 .project--section .project-section .project-card .card-list a .work-top img {
@@ -389,6 +391,7 @@ nav .nav-contact .menu-close svg {
   flex-direction: column;
   row-gap: var(--text-4xls);
   padding: var(--text-4xls) 0;
+  border-bottom: 1px solid var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
 }
 .service--section .service-section .service-left div .service-heading {
   display: flex;
@@ -397,7 +400,8 @@ nav .nav-contact .menu-close svg {
   gap: 0.5rem;
   font-size: var(--text-sm);
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
+  text-transform: capitalize;
 }
 .service--section .service-section .service-left div .service-subheading {
   font-size: 1.625rem;
@@ -455,6 +459,7 @@ nav .nav-contact .menu-close svg {
   color: var(--title);
   text-decoration: none;
   width: 100%;
+  border-bottom: 1px solid var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
 }
 .service--section .service-section .service-right .card-info .card-data h5 {
   font-size: var(--text-lg);
@@ -467,6 +472,84 @@ nav .nav-contact .menu-close svg {
   line-height: var(--line-xl);
 }
 .service--section .service-section .service-right .card-info:last-child {
+  margin-bottom: 3.75rem;
+  border-bottom: 0px;
+}
+
+.testimonial--section .testimonial-section {
+  margin: 0 auto;
+  padding: 0 var(--text-xl);
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-data .testimonial-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  margin-bottom: 0.313rem;
+  text-transform: capitalize;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-data .testimonial-subheading {
+  font-size: 1.625rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card {
+  margin-top: var(--text-xl);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.875rem;
+  flex-direction: column;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card {
+  padding: 1.563rem;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.875rem;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  border-radius: var(--text-xxs);
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-info .review-quote {
+  font-size: var(--text-md);
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-info .review-text {
+  font-size: var(--text-sm);
+  line-height: var(--line-xl);
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  font-size: 12px;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-img {
+  display: inline-flex;
+  align-items: center;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-img img {
+  max-height: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-detail {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: var(--line-xl);
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-detail span {
+  display: block;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-detail span:nth-child(1) {
+  margin-bottom: 2px;
+}
+.testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child {
   margin-bottom: 3.75rem;
 }
 
@@ -607,6 +690,30 @@ nav .nav-contact .menu-close svg {
     font-size: var(--text-md);
     line-height: var(--line-2xl);
   }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-data {
+    margin-bottom: 1.25rem;
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-data .testimonial-subheading {
+    font-size: 2.25rem;
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card {
+    flex-direction: row;
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card, .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child {
+    margin-bottom: var(--text-large);
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-info .review-quote, .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child .card-info .review-quote {
+    font-size: var(--text-md);
+    margin-bottom: var(--text-xxs);
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-img img, .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child .card-data .card-img img {
+    min-height: var(--text-hero);
+    max-height: var(--text-hero);
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-detail, .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child .card-data .card-detail {
+    font-size: var(--text-md);
+    line-height: var(--line-2xl);
+  }
 }
 @media (min-width: 1024px) {
   nav {
@@ -734,10 +841,14 @@ nav .nav-contact .menu-close svg {
     padding: var(--text-hero) 3.75rem var(--text-hero) 0;
     justify-content: space-between;
     max-width: 46%;
+    margin-bottom: 9.375rem;
+    border-right: 1px solid var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
+    border-bottom: 0;
   }
   .service--section .service-section .service-right {
     padding-top: var(--text-hero);
     max-width: 50%;
+    margin-bottom: 9.375rem;
   }
   .service--section .service-section .service-right .card-info {
     -moz-column-gap: 78px;
@@ -747,5 +858,38 @@ nav .nav-contact .menu-close svg {
   .service--section .service-section .service-right .card-info .card-data h5 {
     font-size: 20px;
     margin-bottom: 22px;
+  }
+  .service--section .service-section .service-right .card-info:last-child {
+    margin-bottom: 0;
+  }
+  .testimonial--section .testimonial-section {
+    max-width: 1336px;
+    margin: 0 auto;
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-data .testimonial-subheading {
+    font-size: var(--text-4xl);
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card {
+    flex-direction: row;
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card, .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child {
+    margin-bottom: 9.375rem;
+    padding: 2.188rem;
+    gap: var(--text-hero);
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-info .review-quote, .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child .card-info .review-quote {
+    font-size: var(--text-lg);
+    margin-bottom: var(--text-mds);
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-info .review-text, .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child .card-info .review-text {
+    font-size: var(--text-md);
+    line-height: var(--line-2xl);
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-img img, .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child .card-data .card-img img {
+    min-height: 3.438rem;
+    max-height: 3.438rem;
+  }
+  .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-detail span:nth-child(1), .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child .card-data .card-detail span:nth-child(1) {
+    margin-bottom: 0px;
   }
 }/*# sourceMappingURL=index.css.map */
