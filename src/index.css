@@ -553,6 +553,123 @@ nav .nav-contact .menu-close svg {
   margin-bottom: 3.75rem;
 }
 
+.contact--section {
+  padding: var(--text-4xls) 0;
+}
+.contact--section .contact-section {
+  padding: 0 var(--text-xl);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--text-4xls);
+  flex-direction: column;
+}
+.contact--section .contact-section .contact-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--text-xxl);
+  flex-direction: column;
+}
+.contact--section .contact-section .contact-top .contact-info .contact-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  margin-bottom: 0.313rem;
+  text-transform: capitalize;
+}
+.contact--section .contact-section .contact-top .contact-info .contact-para {
+  margin-top: var(--text-mds);
+  font-size: var(--text-sm);
+  line-height: var(--line-xl);
+  font-weight: 400;
+}
+.contact--section .contact-section .contact-top .contact-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: var(--text-xxs);
+}
+.contact--section .contact-section .contact-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--text-4xls);
+  flex-direction: column;
+  margin-bottom: 3.75rem;
+  width: 100%;
+}
+.contact--section .contact-section .contact-bottom .contact-heading {
+  font-size: 1.375rem;
+  line-height: var(--line-xl);
+  font-weight: 400;
+}
+.contact--section .contact-section .contact-bottom .contact-form {
+  width: 100%;
+}
+.contact--section .contact-section .contact-bottom .contact-form form .form-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: var(--text-5xls);
+}
+.contact--section .contact-section .contact-bottom .contact-form form .form-wrap div .field-label {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--text-xxs);
+}
+.contact--section .contact-section .contact-bottom .contact-form form .form-wrap div .field-label .name {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: var(--line-xl);
+}
+.contact--section .contact-section .contact-bottom .contact-form form .form-wrap div input, .contact--section .contact-section .contact-bottom .contact-form form .form-wrap div textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1019607843);
+  padding-bottom: 4px;
+  color: #000;
+  line-height: var(--line-xl);
+  font-size: var(--text-sm);
+}
+.contact--section .contact-section .contact-bottom .contact-form form .form-wrap div textarea {
+  min-height: var(--text-large);
+}
+.contact--section .contact-section .contact-bottom .contact-form form .contact-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--text-xs);
+  padding: 5px 5px 5px 20px;
+  font-size: var(--text-sm);
+  color: var(--bg);
+  background: var(--title);
+  text-decoration: none;
+  text-transform: capitalize;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50px;
+}
+.contact--section .contact-section .contact-bottom .contact-form form .contact-btn span:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  background: var(--primary);
+  border-radius: 50%;
+  min-width: 35px;
+  min-width: 35px;
+  max-height: 35px;
+  min-height: 35px;
+}
+
 @media (min-width: 768px) {
   .hero--section .hero_section {
     display: flex;
@@ -714,6 +831,26 @@ nav .nav-contact .menu-close svg {
     font-size: var(--text-md);
     line-height: var(--line-2xl);
   }
+  .contact--section {
+    padding: 2.5rem 0;
+  }
+  .contact--section .contact-section .contact-top .contact-info .contact-para {
+    font-size: 16px;
+    line-height: var(--line-2xl);
+  }
+  .contact--section .contact-section .contact-bottom {
+    margin-bottom: var(--text-large);
+  }
+  .contact--section .contact-section .contact-bottom .contact-heading {
+    font-size: 1.625rem;
+  }
+  .contact--section .contact-section .contact-bottom .contact-form form .form-wrap {
+    grid-column-gap: 30px;
+    grid-row-gap: 50px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+  }
 }
 @media (min-width: 1024px) {
   nav {
@@ -836,6 +973,8 @@ nav .nav-contact .menu-close svg {
   .service--section .service-section {
     display: flex;
     justify-content: space-between;
+    max-width: 1336px;
+    margin: 0 auto;
   }
   .service--section .service-section .service-left {
     padding: var(--text-hero) 3.75rem var(--text-hero) 0;
@@ -891,5 +1030,28 @@ nav .nav-contact .menu-close svg {
   }
   .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card .card-data .card-detail span:nth-child(1), .testimonial--section .testimonial-section .testimonial-info .testimonial-card .card:last-child .card-data .card-detail span:nth-child(1) {
     margin-bottom: 0px;
+  }
+  .contact--section {
+    padding: var(--text-hero) 0;
+  }
+  .contact--section .contact-section {
+    flex-direction: row;
+    -moz-column-gap: 5.625rem;
+         column-gap: 5.625rem;
+    max-width: 1336px;
+    margin: 0 auto;
+  }
+  .contact--section .contact-section .contact-top {
+    margin-bottom: 9.375rem;
+    max-width: 34%;
+    row-gap: 3.125rem;
+  }
+  .contact--section .contact-section .contact-bottom {
+    margin-bottom: 9.375rem;
+    max-width: 66%;
+    gap: 3.125rem;
+  }
+  .contact--section .contact-section .contact-bottom .contact-heading {
+    font-size: 1.75rem;
   }
 }/*# sourceMappingURL=index.css.map */
