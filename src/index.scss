@@ -93,7 +93,7 @@ body {
 }
 
 @mixin headingName() {
-  @include flexProperty(center, flex-start, .5rem);
+  @include flexProperty(center, flex-start, 0.5rem);
   font-size: var(--text-sm);
   font-weight: 400;
   margin-bottom: 0.313rem;
@@ -331,7 +331,7 @@ nav {
       column-gap: var(--text-5xls);
       row-gap: var(--text-mds);
       border-top: 1px solid rgba(0, 0, 0, 0.1019607843);
-      
+
       img {
         filter: grayscale(1);
       }
@@ -399,7 +399,7 @@ nav {
 
             img {
               display: none;
-              transition: transform .3s ease;
+              transition: transform 0.3s ease;
             }
           }
 
@@ -407,8 +407,8 @@ nav {
             img {
               width: 100%;
               height: 100%;
-              transform: scale(.98);
-              transition: transform .3s ease;
+              transform: scale(0.98);
+              transition: transform 0.3s ease;
             }
           }
         }
@@ -422,7 +422,7 @@ nav {
 
           .work-img {
             img {
-              transform: scale(1),
+              transform: scale(1);
             }
           }
         }
@@ -445,8 +445,9 @@ nav {
       flex-direction: column;
       row-gap: var(--text-4xls);
       padding: var(--text-4xls) 0;
-      border-bottom: 1px solid var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
-      
+      border-bottom: 1px solid
+        var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
+
       div {
         .service-heading {
           @include headingName();
@@ -487,7 +488,8 @@ nav {
         color: var(--title);
         text-decoration: none;
         width: 100%;
-        border-bottom: 1px solid var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
+        border-bottom: 1px solid
+          var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
 
         .card-data {
           h5 {
@@ -657,7 +659,7 @@ nav {
               .field-label {
                 margin-bottom: 4px;
                 @include flexProperty(center, flex-start, var(--text-xxs));
-                
+
                 .name {
                   font-size: var(--text-sm);
                   font-weight: 400;
@@ -665,7 +667,8 @@ nav {
                 }
               }
 
-              input, textarea {
+              input,
+              textarea {
                 width: 100%;
                 border: none;
                 outline: none;
@@ -687,6 +690,129 @@ nav {
 
             span:nth-child(2) {
               @include btnProperty1Span();
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Fact
+.fact--section {
+  .fact-section {
+    padding: 0 var(--text-xl);
+    margin: 0 auto;
+
+    .fact-wrapper {
+      .fact-left {
+        padding: var(--text-xl);
+        @include flexProperty(flex-start, flex-start, var(--text-4xls));
+        flex-direction: column;
+
+        div {
+          .fact-name {
+            @include headingName();
+            margin-bottom: var(--text-xxs);
+          }
+
+          .fact-para {
+            font-size: var(--text-sm);
+            line-height: var(--line-xl);
+            font-weight: 400;
+          }
+        }
+        .fact-btn {
+          @include btnProperty1();
+
+          span:nth-child(2) {
+            @include btnProperty1Span();
+          }
+        }
+      }
+
+      .fact-right {
+        @include flexProperty(flex-start, flex-start, 0);
+        flex-direction: column;
+
+        .fact-data {
+          display: flex;
+          flex-direction: column;
+
+          .fact-block {
+            padding: 20px;
+            @include flexProperty(flex-start, flex-start, 15px);
+            flex-direction: column;
+            order: 2;
+
+            span:nth-child(1) {
+              font-size: var(--text-sm);
+              line-height: var(--line-xl);
+            }
+
+            span:nth-child(2) {
+              font-size: var(--text-2xl);
+              font-weight: 500;
+            }
+          }
+
+          .fact-img {
+            background: #fff;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            order: 1;
+
+            img {
+              max-width: 100%;
+              vertical-align: middle;
+              object-fit: cover;
+            }
+
+            .img-overlay {
+              position: absolute;
+              inset: 0;
+              background: var(--bg);
+              z-index: 2;
+              transform: translateY(0%);
+            }
+          }
+        }
+
+        .fact-right-grid {
+          width: 100%;
+          margin-bottom: 3.75rem;
+
+          .fact-block-bg {
+            padding: 20px;
+            @include flexProperty(flex-start, flex-start, 15px);
+            flex-direction: column;
+            background: var(--primary);
+
+            span:nth-child(1) {
+              font-size: var(--text-sm);
+              line-height: var(--line-xl);
+            }
+
+            span:nth-child(2) {
+              font-size: var(--text-2xl);
+              font-weight: 500;
+            }
+          }
+
+          .fact-block {
+            padding: 20px;
+            @include flexProperty(flex-start, flex-start, 15px);
+            flex-direction: column;
+
+            span:nth-child(1) {
+              font-size: var(--text-sm);
+              line-height: var(--line-xl);
+            }
+
+            span:nth-child(2) {
+              font-size: var(--text-2xl);
+              font-weight: 500;
             }
           }
         }
@@ -846,11 +972,10 @@ nav {
   // Service
   .service--section {
     .service-section {
-      .service-left{
+      .service-left {
         row-gap: 40px;
         padding: 50px 60px 50px 0;
 
-        
         div {
           .service-subheading {
             font-size: 2.25rem;
@@ -906,7 +1031,8 @@ nav {
         .testimonial-card {
           flex-direction: row;
 
-          .card, .card:last-child {
+          .card,
+          .card:last-child {
             margin-bottom: var(--text-large);
 
             .card-info {
@@ -964,6 +1090,82 @@ nav {
               grid-template-rows: auto;
               grid-template-columns: 1fr 1fr;
               grid-auto-columns: 1fr;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Fact
+  .fact--section {
+    .fact-section {
+      .fact-wrapper {
+        .fact-left {
+          padding: var(--text-4xls);
+          row-gap: var(--text-5xls);
+          border: 1px solid #0000001a;
+          border-radius: var(--text-xxs) 0 0 var(--text-xxs);
+
+          div {
+            .fact-name {
+              margin-bottom: var(--text-xxs);
+            }
+
+            .fact-para {
+              font-size: var(--text-md);
+            }
+          }
+        }
+
+        .fact-right {
+          flex-direction: row;
+          margin-bottom: var(--text-large);
+          align-items: stretch;
+          overflow: hidden;
+          border: 1px solid #0000001a;
+          border-radius: 0 var(--text-xxs) var(--text-xxs) 0;
+
+          .fact-data {
+            max-width: 66%;
+
+            .fact-block {
+              order: 1;
+              padding: var(--text-4xls);
+              font-size: 14px;
+            }
+
+            span:nth-child(2) {
+              font-size: 2.25rem !important;
+            }
+
+            .fact-img {
+              order: 2;
+            }
+          }
+
+          .fact-right-grid {
+            margin-bottom: 0px;
+            max-width: 34%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-auto-columns: 1fr;
+
+            .fact-block-bg {
+              padding: var(--text-4xls);
+
+              span:nth-child(2) {
+                font-size: 2.25rem !important;
+              }
+            }
+
+            .fact-block {
+              padding: var(--text-4xls);
+
+              span:nth-child(2) {
+                font-size: 2.25rem !important;
+              }
             }
           }
         }
@@ -1145,12 +1347,13 @@ nav {
       justify-content: space-between;
       @include maxWidth();
 
-      .service-left{
+      .service-left {
         padding: var(--text-hero) 3.75rem var(--text-hero) 0;
         justify-content: space-between;
         max-width: 46%;
         margin-bottom: 9.375rem;
-        border-right: 1px solid var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
+        border-right: 1px solid
+          var(--darkreader-border-0000001a, rgba(140, 130, 115, 0.1));
         border-bottom: 0;
       }
 
@@ -1193,7 +1396,8 @@ nav {
         .testimonial-card {
           flex-direction: row;
 
-          .card, .card:last-child {
+          .card,
+          .card:last-child {
             margin-bottom: 9.375rem;
             padding: 2.188rem;
             gap: var(--text-hero);
@@ -1252,6 +1456,75 @@ nav {
 
         .contact-heading {
           font-size: 1.75rem;
+        }
+      }
+    }
+  }
+
+  // Fact
+  .fact--section {
+    .fact-section {
+      @include maxWidth();
+
+      .fact-wrapper {
+        display: flex;
+        flex-direction: row;
+
+        .fact-left {
+          justify-content: space-between;
+          padding: var(--text-5xls) 2.188rem;
+          max-width: 26%;
+          margin-bottom: 150px;
+        }
+
+        .fact-right {
+          margin-bottom: 150px;
+
+          .fact-data {
+            max-width: 66%;
+
+            .fact-block {
+              padding: var(--text-5xls);
+
+              span:nth-child(1) {
+                font-size: var(--text-md);
+              }
+
+              span:nth-child(2) {
+                font-size: var(--text-5xl) !important;
+              }
+            }
+          }
+
+          .fact-right-grid {
+            max-width: 34%;
+
+            .fact-block-bg {
+              justify-content: center;
+              padding: var(--text-5xls);
+
+              span:nth-child(1) {
+                font-size: var(--text-md);
+              }
+
+              span:nth-child(2) {
+                font-size: var(--text-5xl) !important;
+              }
+            }
+
+            .fact-block {
+              justify-content: center;
+              padding: var(--text-5xls);
+
+              span:nth-child(1) {
+                font-size: var(--text-md);
+              }
+
+              span:nth-child(2) {
+                font-size: var(--text-5xl) !important;
+              }
+            }
+          }
         }
       }
     }
