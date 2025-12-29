@@ -2,6 +2,7 @@ import AboutUs from '../components/AboutUs';
 import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 import Fact from '../components/Fact';
+import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Nav from '../components/Nav';
 import Projects from '../components/Projects';
@@ -20,6 +21,7 @@ const Home = () => {
       <Contact />
       <Fact />
       <Blog />
+      <Footer />
     </>
   );
 };

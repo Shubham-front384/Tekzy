@@ -4,7 +4,25 @@ const Footer = () => {
       <div className="footer-section">
         <div className="footer-top">
           <div className="footer-detail">
-            <div className="ft-top"></div>
+            <div className="ft-top">
+              <a href="http://">
+                <img src="https://cdn.prod.website-files.com/67a1e1caa5c0cb17e5a0f745/67a1fe629b4bc2207fecca43_brand.svg" loading="lazy" alt="tekzy-img" />
+              </a>
+              <p className="footer-txt">
+                Stay updated with the latest industry trends, Tekzy news, and exclusive offers.
+              </p>
+              <div className="contact-form">
+                <form>
+                  <input type="email" name="Email" id="email" placeholder="Email address" required />
+                  <div>
+                    <input type="submit" value="Subscribe" />
+                    <span>
+                      <img src="https://cdn.prod.website-files.com/67a1e1caa5c0cb17e5a0f745/67a1f1e639c1b4b714bd4d94_62a76ce4c5cd498d21fea0dd5dc47ad0_button-arrow.svg" alt="Icon" />
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
             <div className="ft-bottom">
               <div>
                 <h6>pages</h6>
