@@ -1,0 +1,84 @@
+import BlogCard from "./BlogCard"
+import Logo from "/Img/aboutUsLogo.svg"
+import blogData from "../data/Blogs"
+import gsap from "gsap"
+import ScrollTrigger from "gsap/ScrollTrigger.js"
+import { useLayoutEffect, useRef } from "react"
+
+gsap.registerPlugin(ScrollTrigger);
+const Blog = () => {
+  const sectionRef = useRef();
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia();
+
+      gsap.set(".blog-detail", {
+        opacity: 0,
+        y: 60,
+      });
+
+      mm.add("(max-width: 767px)", () => {
+        ScrollTrigger.batch(".blog-detail", {
+          start: "top 95%",
+          onEnter: (batch) => {
+            gsap.to(batch, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              ease: "power3.out",
+            });
+          },
+          once: true,
+        });
+      });
+
+      mm.add("(min-width: 768px)", () => {
+        gsap.to(".blog-detail", {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+            once: true,
+          },
+        });
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <section className="blog--section" ref={sectionRef}>
+      <div className="blog-section">
+        <div className="blog-top">
+          <h5 className="blog-name">
+            <span>
+              <img src={Logo} alt="logo-img" />
+            </span>
+            <span>
+              Our blogs
+            </span>
+          </h5>
+          <h4 className="subheading">
+            latest articles
+          </h4>
+        </div>
+        <div className="blog-bottom">
+          <div className="card-list">
+            {
+              blogData.map((ele, ind) => (
+                <BlogCard postName={ele.postName} postDate={ele.postDate} postTitle={ele.postTitle} postImg={ele.postImg} key={ind} />
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Blog

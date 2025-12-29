@@ -639,6 +639,7 @@ nav .nav-contact .menu-close svg {
   color: #000;
   line-height: var(--line-xl);
   font-size: var(--text-sm);
+  resize: none;
 }
 .contact--section .contact-section .contact-bottom .contact-form form .form-wrap div textarea {
   min-height: var(--text-large);
@@ -657,6 +658,7 @@ nav .nav-contact .menu-close svg {
   width: -moz-max-content;
   width: max-content;
   border-radius: 50px;
+  margin-top: var(--text-5xls);
 }
 .contact--section .contact-section .contact-bottom .contact-form form .contact-btn span:nth-child(2) {
   display: flex;
@@ -810,6 +812,65 @@ nav .nav-contact .menu-close svg {
 .fact--section .fact-section .fact-wrapper .fact-right .fact-right-grid .fact-block span:nth-child(2) {
   font-size: var(--text-2xl);
   font-weight: 500;
+}
+
+.blog--section .blog-section {
+  padding: 0 var(--text-xl);
+  margin: 0 auto;
+}
+.blog--section .blog-section .blog-top {
+  margin-bottom: var(--text-xl);
+}
+.blog--section .blog-section .blog-top .blog-name {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  font-weight: 400;
+  margin-bottom: 0.313rem;
+  text-transform: capitalize;
+}
+.blog--section .blog-section .blog-top .subheading {
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: var(--line-xl);
+  text-transform: capitalize;
+}
+.blog--section .blog-section .blog-bottom .card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: var(--text-5xls);
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+}
+.blog--section .blog-section .blog-bottom .card-list .blog-detail {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--text-xxs);
+  flex-direction: column;
+}
+.blog--section .blog-section .blog-bottom .card-list .blog-detail .blog-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--text-xxs);
+}
+.blog--section .blog-section .blog-bottom .card-list .blog-detail div .blog-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  font-size: 12px;
+}
+.blog--section .blog-section .blog-bottom .card-list .blog-detail div .post-title {
+  margin-top: 0.375rem;
+  font-size: var(--text-md);
+  font-weight: 500;
+  line-height: var(--line-xl);
+}
+.blog--section .blog-section .blog-bottom .card-list .blog-detail:last-child {
+  margin-bottom: 3.75rem;
 }
 
 @media (min-width: 768px) {
@@ -1050,6 +1111,29 @@ nav .nav-contact .menu-close svg {
   }
   .fact--section .fact-section .fact-wrapper .fact-right .fact-right-grid .fact-block span:nth-child(2) {
     font-size: 2.25rem !important;
+  }
+  .blog--section .blog-section {
+    padding: 0 var(--text-xl);
+    margin: 0 auto;
+  }
+  .blog--section .blog-section .blog-top .subheading {
+    font-size: 2.25rem;
+  }
+  .blog--section .blog-section .blog-bottom .card-list {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: var(--text-xxl);
+  }
+  .blog--section .blog-section .blog-bottom .card-list .blog-detail div .blog-info {
+    font-size: var(--text-sm);
+    gap: var(--text-xxs);
+    font-weight: 400;
+  }
+  .blog--section .blog-section .blog-bottom .card-list .blog-detail div .post-title {
+    margin-top: 0.5rem;
+    font-size: var(--text-lg);
+  }
+  .blog--section .blog-section .blog-bottom .card-list .blog-detail:last-child {
+    margin-bottom: var(--text-large);
   }
 }
 @media (min-width: 1024px) {
@@ -1310,5 +1394,22 @@ nav .nav-contact .menu-close svg {
   }
   .fact--section .fact-section .fact-wrapper .fact-right .fact-right-grid .fact-block span:nth-child(2) {
     font-size: var(--text-5xl) !important;
+  }
+  .blog--section .blog-section {
+    max-width: 1336px;
+    margin: 0 auto;
+  }
+  .blog--section .blog-section .blog-top .subheading {
+    font-size: var(--text-4xl);
+  }
+  .blog--section .blog-section .blog-bottom .card-list {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: var(--text-4xls);
+  }
+  .blog--section .blog-section .blog-bottom .card-list .blog-detail {
+    margin-bottom: 9.375rem;
+  }
+  .blog--section .blog-section .blog-bottom .card-list .blog-detail:last-child {
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=index.css.map */

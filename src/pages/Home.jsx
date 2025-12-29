@@ -1,4 +1,5 @@
 import AboutUs from '../components/AboutUs';
+import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 import Fact from '../components/Fact';
 import Hero from '../components/Hero';
@@ -18,6 +19,7 @@ const Home = () => {
       <Testimonial />
       <Contact />
       <Fact />
+      <Blog />
     </>
   );
 };
