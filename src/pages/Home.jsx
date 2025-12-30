@@ -2,9 +2,7 @@ import AboutUs from '../components/AboutUs';
 import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 import Fact from '../components/Fact';
-import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import Nav from '../components/Nav';
 import Projects from '../components/Projects';
 import Services from '../components/Services';
 import Testimonial from '../components/Testimonial';
@@ -12,16 +10,14 @@ import Testimonial from '../components/Testimonial';
 const Home = () => {
   return (
     <>
-      <Nav />
       <Hero />
       <AboutUs />
-      <Projects />
+      <Projects limit={3} buttonOff={true} />
       <Services />
       <Testimonial />
       <Contact />
       <Fact />
-      <Blog />
-      <Footer />
+      <Blog limit={3} buttonOff={true} />
     </>
   );
 };

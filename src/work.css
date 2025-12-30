@@ -1,0 +1,7 @@
+.project--section .project-section .project-info {
+  margin-bottom: 0;
+  padding: clamp(40px, 5vw, 60px) 0;
+}
+.project--section .project-section .project-card {
+  margin-bottom: clamp(60px, 8vw, 150px);
+}/*# sourceMappingURL=work.css.map */

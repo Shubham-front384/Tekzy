@@ -1,6 +1,7 @@
 import Logo from '/Img/tekzyLogo.svg';
 import rightArrow from '/Img/rightArrow.svg';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -17,24 +18,40 @@ const Nav = () => {
         </div>
         <ul className={`nav-menu ${isOpen ? '' : 'menu-open'}`}>
           <li>
-            <span>home</span>
-            <span>home</span>
+            <span>
+              <NavLink to="/">
+                home
+              </NavLink>
+            </span>
+            <span>
+              <NavLink to="/">
+                home
+              </NavLink>
+            </span>
           </li>
           <li>
-            <span>studio</span>
-            <span>studio</span>
+            <span>
+              <NavLink to="/works">
+                works
+              </NavLink>
+            </span>
+            <span>
+              <NavLink to="/works">
+                works
+              </NavLink>
+            </span>
           </li>
           <li>
-            <span>works</span>
-            <span>works</span>
-          </li>
-          <li>
-            <span>services</span>
-            <span>services</span>
-          </li>
-          <li>
-            <span>blogs</span>
-            <span>blogs</span>
+            <span>
+              <NavLink to="/blogs">
+                blogs
+              </NavLink>
+            </span>
+            <span>
+              <NavLink to="/blogs">
+                blogs
+              </NavLink>
+            </span>
           </li>
           <li>
             <a href="#" className="talk">

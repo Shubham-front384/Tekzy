@@ -105,7 +105,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--text-xs) var(--text-xl); // xs -> mds
+  padding: var(--text-xs) var(--text-xl);
   border-bottom: 1px solid #0000001a;
   position: relative;
   overflow: visible;
@@ -138,6 +138,11 @@ nav {
         display: block;
         line-height: 20px;
         transition: transform 0.35s ease;
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
       }
 
       span:nth-child(2) {
@@ -145,6 +150,11 @@ nav {
         left: 50%;
         top: 20px;
         transform: translateX(-50%);
+
+        a {
+          text-decoration: none;
+          color: #000;
+        }
       }
 
       .talk {
@@ -190,6 +200,12 @@ nav {
       display: none;
     }
 
+    a {
+      span:nth-child(2) {
+        transition: all 0.3s ease;
+      }
+    }
+
     .menu-close {
       position: relative;
       cursor: pointer;
@@ -198,6 +214,18 @@ nav {
 
       svg {
         display: block;
+      }
+    }
+  }
+
+  .nav-contact:hover {
+    .talk {
+      background: var(--primary);
+    }
+
+    a {
+      span:nth-child(2) {
+        transform: rotate(-45deg);
       }
     }
   }
@@ -228,6 +256,15 @@ nav {
 
           span:nth-child(2) {
             @include btnProperty1Span();
+            transition: all 0.3s ease;
+          }
+        }
+      }
+
+      .hero-btn {
+        .hero-work:hover {
+          span:nth-child(2) {
+            transform: rotate(-45deg);
           }
         }
       }
@@ -426,9 +463,18 @@ nav {
             }
           }
         }
+      }
 
-        .project3 {
-          margin-bottom: var(--text-4xls);
+      .navigation {
+        margin-top: var(--text-5xls);
+        @include flexProperty(center, flex-end, 0);
+
+        .next-btn {
+          @include btnProperty1();
+
+          span:nth-child(2) {
+            @include btnProperty1Span();
+          }
         }
       }
     }
@@ -472,6 +518,13 @@ nav {
 
         span:nth-child(2) {
           @include btnProperty1Span();
+          transition: all 0.3s ease;
+        }
+      }
+
+      .service-btn:hover {
+        span:nth-child(2) {
+          transform: rotate(-45deg);
         }
       }
     }
@@ -692,6 +745,13 @@ nav {
 
             span:nth-child(2) {
               @include btnProperty1Span();
+              transition: all 0.3s ease;
+            }
+          }
+
+          .contact-btn:hover {
+            span:nth-child(2) {
+              transform: rotate(-45deg);
             }
           }
         }
@@ -729,6 +789,13 @@ nav {
 
           span:nth-child(2) {
             @include btnProperty1Span();
+            transition: all 0.3s ease;
+          }
+        }
+
+        .fact-btn:hover {
+          span:nth-child(2) {
+            transform: rotate(-45deg);
           }
         }
       }
@@ -830,8 +897,6 @@ nav {
     margin: 0 auto;
 
     .blog-top {
-      margin-bottom: var(--text-xl);
-
       .blog-name {
         @include headingName();
       }
@@ -866,7 +931,7 @@ nav {
 
           div {
             .blog-info {
-              @include flexProperty(flex-start, flex-start, .5rem);
+              @include flexProperty(flex-start, flex-start, 0.5rem);
               font-size: 12px;
             }
 
@@ -878,9 +943,18 @@ nav {
             }
           }
         }
+      }
 
-        .blog-detail:last-child {
-          margin-bottom: 3.75rem;
+      .navigation {
+        @include flexProperty(center, flex-end, 0);
+        margin-top: var(--text-5xls);
+
+        .next-btn {
+          @include btnProperty1();
+
+          span:nth-child(2) {
+            @include btnProperty1Span();
+          }
         }
       }
     }
@@ -912,7 +986,7 @@ nav {
 
           .contact-form {
             form {
-              @include flexProperty(flex-start, flex-start, );
+              @include flexProperty(flex-start, flex-start);
               flex-direction: column;
               gap: var(--text-mds);
 
@@ -937,9 +1011,11 @@ nav {
                   color: #000;
                   background: #fff;
                   border-radius: 50px;
-                  padding: var(--text-mds) 3.25rem var(--text-mds) var(--text-xl);
+                  padding: var(--text-mds) 3.25rem var(--text-mds)
+                    var(--text-xl);
                   font-size: var(--text-sm);
                   line-height: 110%;
+                  cursor: pointer;
                 }
 
                 span {
@@ -952,6 +1028,13 @@ nav {
                   max-height: 35px;
                   min-width: 35px;
                   max-width: 35px;
+                  transition: all 0.3s ease;
+                }
+              }
+
+              div:hover {
+                span {
+                  transform: rotate(-45deg);
                 }
               }
             }
@@ -1233,10 +1316,6 @@ nav {
             }
           }
         }
-
-        .project3 {
-          margin-bottom: var(--text-large) !important;
-        }
       }
     }
   }
@@ -1471,14 +1550,10 @@ nav {
               }
 
               .post-title {
-                margin-top: .5rem;
+                margin-top: 0.5rem;
                 font-size: var(--text-lg);
               }
             }
-          }
-
-          .blog-detail:last-child {
-            margin-bottom: var(--text-large);
           }
         }
       }
@@ -1502,7 +1577,7 @@ nav {
 
             .contact-form {
               form {
-                @include flexProperty(flex-start, flex-start, );
+                @include flexProperty(flex-start, flex-start);
                 flex-direction: column;
                 gap: var(--text-mds);
 
@@ -1518,7 +1593,8 @@ nav {
                     color: #000;
                     background: #fff;
                     border-radius: 50px;
-                    padding: var(--text-mds) 3.25rem var(--text-mds) var(--text-xl);
+                    padding: var(--text-mds) 3.25rem var(--text-mds)
+                      var(--text-xl);
                     font-size: var(--text-sm);
                     line-height: 110%;
                   }
@@ -1560,13 +1636,21 @@ nav {
 
               div {
                 .ft-info {
-                  @include flexProperty(flex-start, flex-start, var(--text-xxs));
+                  @include flexProperty(
+                    flex-start,
+                    flex-start,
+                    var(--text-xxs)
+                  );
                 }
               }
 
               div {
                 .ft-info-data {
-                  @include flexProperty(flex-start, flex-start, var(--text-xxs));
+                  @include flexProperty(
+                    flex-start,
+                    flex-start,
+                    var(--text-xxs)
+                  );
                 }
               }
             }
@@ -1753,10 +1837,6 @@ nav {
               }
             }
           }
-        }
-
-        .project3 {
-          margin-bottom: 9.375rem !important;
         }
       }
     }
@@ -1959,7 +2039,7 @@ nav {
 
       .blog-top {
         .subheading {
-          font-size: var(--text-4xl);
+          font-size: var(--text-5xl);
         }
       }
 
@@ -1967,14 +2047,6 @@ nav {
         .card-list {
           grid-template-columns: 1fr 1fr 1fr;
           grid-column-gap: var(--text-4xls);
-
-          .blog-detail {
-            margin-bottom: 9.375rem;
-          }
-
-          .blog-detail:last-child {
-            margin-bottom: 0;
-          }
         }
       }
     }

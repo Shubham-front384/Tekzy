@@ -17,6 +17,12 @@ const projectInfo = [
     img: '/Img/project3.jpg',
     className: 'project3'
   },
+  {
+    heading: 'Olvox - Technology Website',
+    para: 'Olvox delivers cutting-edge SaaS and technology solutions, empowering businesses with innovation, efficiency, and seamless digital transformation.',
+    img: '/Img/project4.jpg',
+    className: 'project4'
+  },
 ];
 
 export default projectInfo;

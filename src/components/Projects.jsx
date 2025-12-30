@@ -1,12 +1,14 @@
 import ProjectCard from './ProjectCard';
 import Logo from '/Img/aboutUsLogo.svg';
+import rightArrow from '/Img/rightArrow.svg'
 import projectInfo from '../data/Project';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLayoutEffect, useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
-const Projects = () => {
+const Projects = ({ limit, buttonOff }) => {
+  const visibleProjects = limit ? projectInfo.slice(0, limit) : projectInfo;
   const projectContainerRef = useRef();
 
   useLayoutEffect(() => {
@@ -50,7 +52,7 @@ const Projects = () => {
         </div>
         <div className="project-card" ref={projectContainerRef}>
           <div className="card-list">
-            {projectInfo.map((ele, ind) => {
+            {visibleProjects.map((ele, ind) => {
               return (
                 <ProjectCard
                   heading={ele.heading}
@@ -62,6 +64,18 @@ const Projects = () => {
               );
             })}
           </div>
+          {
+            !buttonOff && (
+              <div className='navigation'>
+                <a href="http://" className='next-btn'>
+                  <span>next</span>
+                  <span>
+                    <img src={rightArrow} alt="rightArrow-img" />
+                  </span>
+                </a>
+              </div>
+            )
+          }
         </div>
       </div>
     </section>

@@ -1,0 +1,12 @@
+.blog--section {
+  .blog-top {
+    padding: clamp(40px, 5vw, 60px) 0;
+    margin-bottom: 0;
+  }
+
+  .blog-section {
+    .blog-bottom {
+      margin-bottom: clamp(60px, 8vw, 150px);
+    }
+  }
+}
