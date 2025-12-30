@@ -1,5 +1,5 @@
 import AboutUsTopLeft from "./AboutUsTopLeft"
-import AboutUsTopRight from "./ABoutUsTopRight"
+import AboutUsTopRight from "./AboutUsTopRight"
 
 const AboutUsTop = () => {
   return (
